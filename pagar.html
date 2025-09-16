@@ -1,50 +1,86 @@
-<section class="py-5">
-  <div class="container">
-    <h2 class="mb-4 text-primary">Como Pagar com Criptomoedas</h2>
-    <p class="lead">
-      Usar criptomoedas para pagar por serviços e produtos está cada vez mais comum. 
-      O processo é simples, rápido e pode ser feito diretamente do seu celular. 
-      Veja como funciona na prática:
-    </p>
-
-    <h3 class="mt-5 text-secondary">1. Pagamento em Estabelecimentos Comerciais</h3>
-    <p>
-      Muitos estabelecimentos já aceitam criptomoedas. Normalmente, o comerciante terá uma carteira 
-      ou sistema de recebimento (como BTCPay Server, Strike ou carteira Lightning).
-    </p>
-    <ul>
-      <li>Você escaneia o QR Code apresentado pelo vendedor.</li>
-      <li>Confirma a transação em sua carteira digital.</li>
-      <li>Em segundos, o pagamento é confirmado.</li>
-    </ul>
-
-    <h3 class="mt-5 text-secondary">2. Pagamentos Online</h3>
-    <p>
-      Diversos sites e e-commerces aceitam criptos. Plataformas de pagamento como 
-      <strong>CoinPayments</strong>, <strong>BitPay</strong> ou até mesmo exchanges locais oferecem integração de checkout com Bitcoin, USDT, USDC e outras moedas.
-    </p>
-
-    <h3 class="mt-5 text-secondary">3. Transferência Direta de Carteira para Carteira</h3>
-    <p>
-      Caso você esteja pagando um serviço autônomo (como um programador, designer ou consultor), 
-      o pagamento pode ser feito transferindo diretamente para a carteira informada pelo prestador.
-    </p>
-    <p>
-      Esse modelo dispensa intermediários, mas lembre-se de sempre confirmar o endereço corretamente.
-    </p>
-
-    <h3 class="mt-5 text-secondary">4. Lightning Network</h3>
-    <p>
-      Para valores menores ou pagamentos instantâneos, o uso da <a href="lightning.html">Lightning Network</a> 
-      é recomendado, pois oferece transações quase sem custo e confirmação imediata.
-    </p>
-
-    <div class="alert alert-info mt-5">
-      <h5>Dica</h5>
-      <p>
-        Tenha sempre um aplicativo de carteira no celular. Assim, você pode pagar usando apenas a câmera, 
-        sem precisar de maquininhas de cartão ou intermediários.
-      </p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Pagar com Criptomoedas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Cripto no Dia a Dia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="comprar.html">Comprar</a></li>
+          <li class="nav-item"><a class="nav-link active" href="pagar.html">Pagar</a></li>
+          <li class="nav-item"><a class="nav-link" href="receber.html">Receber</a></li>
+          <li class="nav-item"><a class="nav-link" href="armazenar.html">Armazenar</a></li>
+          <li class="nav-item"><a class="nav-link" href="lightning.html">Lightning</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </nav>
+
+  <!-- Conteúdo -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-primary">Como Pagar com Criptomoedas</h2>
+      <p class="lead">
+        Usar criptomoedas para pagar por serviços e produtos está cada vez mais comum. 
+        O processo é simples, rápido e pode ser feito diretamente do seu celular. 
+        Veja como funciona na prática:
+      </p>
+
+      <h3 class="mt-5 text-secondary">1. Pagamento em Estabelecimentos Comerciais</h3>
+      <p>
+        Muitos estabelecimentos já aceitam criptomoedas. Normalmente, o comerciante terá uma carteira 
+        ou sistema de recebimento (como BTCPay Server, Strike ou carteira Lightning).
+      </p>
+      <ul>
+        <li>Você escaneia o QR Code apresentado pelo vendedor.</li>
+        <li>Confirma a transação em sua carteira digital.</li>
+        <li>Em segundos, o pagamento é confirmado.</li>
+      </ul>
+
+      <h3 class="mt-5 text-secondary">2. Pagamentos Online</h3>
+      <p>
+        Diversos sites e e-commerces aceitam criptos. Plataformas de pagamento como 
+        <strong>CoinPayments</strong>, <strong>BitPay</strong> ou até mesmo exchanges locais oferecem integração de checkout.
+      </p>
+
+      <h3 class="mt-5 text-secondary">3. Transferência Direta de Carteira para Carteira</h3>
+      <p>
+        Caso você esteja pagando um serviço autônomo, o pagamento pode ser feito transferindo diretamente 
+        para a carteira informada pelo prestador.
+      </p>
+
+      <h3 class="mt-5 text-secondary">4. Lightning Network</h3>
+      <p>
+        Para valores menores ou pagamentos instantâneos, o uso da <a href="lightning.html">Lightning Network</a> 
+        é recomendado, pois oferece transações quase sem custo e confirmação imediata.
+      </p>
+
+      <div class="alert alert-info mt-5">
+        <h5>Dica</h5>
+        <p>
+          Tenha sempre um aplicativo de carteira no celular. Assim, você pode pagar usando apenas a câmera, 
+          sem precisar de maquininhas de cartão ou intermediários.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 Cripto no Dia a Dia. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
