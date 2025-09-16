@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cripto no Dia a Dia — Guia Prático</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{--accent:#0d6efd}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    header{background:linear-gradient(90deg, rgba(13,110,253,0.08), rgba(13,110,253,0.02));}
+    .hero{padding:3rem 1rem}
+    .card-pre{background:#0d6efd0f}
+    pre{background:#0f172020;padding:1rem;border-radius:.5rem;color:#0b1220;overflow:auto}
+    code{background:#f8f9fa;padding:.15rem .35rem;border-radius:.25rem}
+    .qr-box{max-width:220px}
+    footer{font-size:.9rem;color:#6c757d;padding:1.25rem 0}
+  </style>
+</head>
+<body>
+  <header class="mb-4">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand" href="#">Cripto no Dia a Dia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#comprar">Como comprar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#receber">Como receber</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pagar">Como pagar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#armazenar">Como armazenar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lightning">Lightning (POS móvel)</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container hero">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-6">Use cripto no seu dia a dia — guia prático, seguro e direto</h1>
+          <p class="lead">Passo a passo para comprar, receber, pagar e guardar criptomoedas — com atenção à segurança e exemplos práticos. Ideal para comércios, prestadores de serviço e quem quer usar o celular como máquina de pagamento.</p>
+          <p class="text-muted">Conteúdo técnico, atualizado para práticas consolidadas. Feito para quem valoriza métodos tradicionais e comprovados.</p>
+        </div>
+        <div class="col-lg-5 text-end d-none d-lg-block">
+          <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/bitcoin.svg" alt="BTC" width="120">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <!-- Como comprar -->
+    <section id="comprar" class="mb-5">
+      <h2>1. Como comprar Bitcoin, USDT, USDC e outras</h2>
+      <p>Resumo dos passos: 1) Escolha uma corretora ou exchange de confiança; 2) Crie conta e verifique identidade; 3) Deposite reais (ou outra moeda); 4) Compre o ativo desejado; 5) Transfira para sua carteira se for uso pessoal/comercial.</p>
+
+      <div class="row gy-3">
+        <div class="col-md-6">
+          <div class="card card-pre p-3">
+            <h5>Exemplo passo a passo (modo simplificado)</h5>
+            <ol>
+              <li>Cadastre-se em uma exchange respeitada e habilitada no país.</li>
+              <li>Faça verificação KYC (documentos) se necessário.</li>
+              <li>Deposite por TED/PIX.</li>
+              <li>No mercado, escolha par <code>BRL/BTC</code> ou <code>BRL/USDT</code> e execute a ordem (market ou limit).</li>
+              <li>Se for uso em comércio, transfira parte para uma carteira de custódia (hot wallet) ou mantenha em exchange com regras claras de retirada.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h6>Boas práticas</h6>
+          <ul>
+            <li>Prefira corretoras com seguro, boa reputação e retirada provada.</li>
+            <li>Use ordens limit para evitar slippage em compras grandes.</li>
+            <li>Mantenha registros fiscais e notas das operações (exigências locais variam).</li>
+          </ul>
+        </div>
+      </div>
+
+      <h6 class="mt-3">Exemplo: botão "Comprar" (snippet para site)</h6>
+      <pre><code>&lt;!-- botão simples que redireciona para uma página de compra na sua exchange favorita --&gt;
+&lt;a class="btn btn-primary" href="https://www.sua-exchange.com.br/compra?asset=BTC" target="_blank"&gt;Comprar Bitcoin&lt;/a&gt;</code></pre>
+    </section>
+
+    <!-- Como receber -->
+    <section id="receber" class="mb-5">
+      <h2>2. Como receber cripto no seu comércio ou serviço</h2>
+      <p>Existem duas abordagens principais: aceitar on-chain (endereços tradicionais) e aceitar via Lightning (pagamentos instantâneos e com taxas baixas). Escolha conforme volume e experiência.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Recebimento on-chain (BTC, USDT, USDC)</h5>
+          <ol>
+            <li>Crie uma carteira para o comércio (hardware wallet preferível para grandes valores).</li>
+            <li>Gere um endereço por venda (recomendado — evita mistura de pagamentos).</li>
+            <li>Mostre o endereço / QR code para o cliente; confirme recebimento na blockchain.</li>
+            <li>Se desejar liquidez em BRL, integre com uma exchange ou serviço de conversão (payout automático).</li>
+          </ol>
+        </div>
+        <div class="col-md-6">
+          <h5>Recebimento via serviços de pagamento (pagadores terceirizados)</h5>
+          <p>Serviços como processadores de pagamento (BTCPay, OpenNode, etc.) simplificam: geram faturas, fornecem conversão automática e webhooks para reconciliar vendas no seu ERP.</p>
+        </div>
+      </div>
+
+      <h6 class="mt-3">Exemplo: gerar QR com URI Bitcoin</h6>
+      <p>URI Bitcoin padrão exemplo:</p>
+      <pre><code>bitcoin:bc1qexemploendereco...&amount=0.001&label=Compra%20LojaX</code></pre>
+      <p>Gerar QR (exemplo rápido usando Chart API):</p>
+      <pre><code>&lt;img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=bitcoin:bc1qexemploendereco...&amount=0.001" alt="QR"&gt;</code></pre>
+
+    </section>
+
+    <!-- Como pagar -->
+    <section id="pagar" class="mb-5">
+      <h2>3. Como pagar por serviços ou comprar produtos com cripto</h2>
+      <p>Para pagar, o cliente precisa ter uma carteira com os fundos e escanear o QR do comerciante ou enviar para o endereço fornecido. Em lojas online, você pode integrar um gateway que gera faturas automaticamente.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h6>Fila de confirmação e UX</h6>
+          <ul>
+            <li>Mostre ao cliente o valor em BRL e o equivalente em cripto no momento da geração da fatura.</li>
+            <li>Informe claramente número de confirmações necessárias (para BTC, 1-3 confirmações para valores pequenos é comum; para valores altos, esperar mais confirmações).</li>
+            <li>Para experiência rápida, prefira Lightning quando possível (pagamentos instantâneos).</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h6>Exemplo: iframe com um botão de pagamento (integração simples)</h6>
+          <pre><code>&lt;!-- substituir pelo endpoint do seu processador de pagamentos --&gt;
+&lt;iframe src="https://meu-pago-criptos.example.com/invoice?amount_brl=50" width="100%" height="400"&gt;&lt;/iframe&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como armazenar -->
+    <section id="armazenar" class="mb-5">
+      <h2>4. Como armazenar de maneira segura</h2>
+      <p>Segurança é o ponto crítico. Três camadas comuns:</p>
+      <ol>
+        <li><strong>Cold storage</strong> — carteiras offline / hardware wallets (Ledger, Trezor) para valores grandes.</li>
+        <li><strong>Hot wallets</strong> — carteiras conectadas à internet para uso diário (custódia controlada, multisig quando possível).</li>
+        <li><strong>Backups e gestão de chaves</strong> — use seed phrases offline, gravação em aço quando possível; múltiplas cópias em locais seguros.</li>
+      </ol>
+
+      <h6>Recomendações práticas</h6>
+      <ul>
+        <li>Não armazene seeds em texto simples no celular ou no e-mail.</li>
+        <li>Use autenticação multifator (2FA) em exchanges e serviços.</li>
+        <li>Considere multisig para fundos da empresa (ex.: 2-de-3 assinaturas).</li>
+      </ul>
+
+      <h6 class="mt-2">Exemplo: backup de seed em aço (procedimento)</h6>
+      <ol>
+        <li>Compre uma placa de aço para seed backup.</li>
+        <li>Grave as 12/24 palavras sem conectá-las à internet.</li>
+        <li>Armazene em local seguro e separado (cofre, banco).</li>
+      </ol>
+    </section>
+
+    <!-- Lightning -->
+    <section id="lightning" class="mb-5">
+      <h2>5. Lightning do Bitcoin — use seu celular como máquina de pagamento</h2>
+      <p>Lightning é uma segunda camada para Bitcoin que permite pagamentos instantâneos e com taxas baixas — ideal para pagamentos no comércio diário. Você pode operar via uma wallet móvel que gera invoices, ou rodar um node (BTCPay + LND/CLN) para controle total.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h6>Opções para comerciantes</h6>
+          <ul>
+            <li>Usar um processador/serviço (faturamento Lightning + conversão automática).</li>
+            <li>Rodar BTCPay Server + Lightning node para controle total e sem custódia.</li>
+            <li>Carteiras móveis para receber (ex.: Phoenix, Muun, BlueWallet — verifique compatibilidade).</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h6>Fluxo simples: cliente paga via QR Lightning</h6>
+          <ol>
+            <li>Gerar invoice Lightning (com valor e memo).</li>
+            <li>Mostrar QR ou copiar a string (bolt11) para o cliente.</li>
+            <li>Cliente paga com a carteira Lightning; pagamento confirmado instantaneamente.</li>
+          </ol>
+        </div>
+      </div>
+
+      <h6 class="mt-3">Exemplo de invoice (modelo bolt11)</h6>
+      <pre><code>lnbc10u1p...exemplo...xqzj</code></pre>
+
+      <p>Exibir QR (exemplo):</p>
+      <div class="d-flex align-items-center">
+        <div class="qr-box me-3">
+          &lt;!-- QR gerado dinamicamente pelo backend; exemplo de placeholder --&gt;
+          &lt;img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=lnbc10u1p...exemplo...xqzj" alt="QR Lightning" class="img-fluid"&gt;
+        </div>
+        <div>
+          <p class="mb-0"><strong>Exemplo bolt11:</strong> <code>lnbc10u1p...exemplo...xqzj</code></p>
+          <p class="text-muted small">Cole a bolt11 na carteira do cliente ou apresente o QR.</p>
+        </div>
+      </div>
+
+      <h6 class="mt-3">Posso usar o celular como POS?</h6>
+      <p>Sim — duas abordagens:</p>
+      <ul>
+        <li>Instalar uma carteira / app que gere invoices e mostre QR no celular do comerciante (mais simples).</li>
+        <li>Usar outro dispositivo para pagar: o cliente abre a carteira no celular e escaneia o QR do comerciante (modo comum).</li>
+      </ul>
+
+      <h6 class="mt-2">Integração técnica (exemplo de endpoint que gera um invoice em Node.js — pseudocódigo)</h6>
+      <pre><code>// Exemplo resumido (server Node) que pede invoice ao seu node Lightning
+const express = require('express');
+const axios = require('axios');
+const app = express();
+app.get('/invoice', async (req, res) =&gt; {
+  const { amount_sats, memo } = req.query;
+  // Chamada para seu node (ex: LND, CLN, ou um provedor)
+  const r = await axios.post('http://meu-lnd:8080/v1/invoices', { value: amount_sats, memo });
+  res.json(r.data); // contém bolt11
+});
+</code></pre>
+
+    </section>
+
+    <!-- Recursos técnicos e checklist -->
+    <section id="recursos" class="mb-5">
+      <h2>Recursos técnicos & checklist para implementação</h2>
+      <ul>
+        <li>Decida entre custodial vs non-custodial (segurança x conveniência).</li>
+        <li>Implemente reconciliação de pagamentos (webhooks) no seu sistema de vendas.</li>
+        <li>Documente políticas de reembolso, chargeback e conversão de preço em BRL.</li>
+        <li>Teste tudo em ambiente de homologação antes de ir à produção.</li>
+      </ul>
+
+      <h6 class="mt-3">Snippets úteis</h6>
+      <pre><code>&lt;!-- Gerar QR no cliente usando uma API de QR --&gt;
+const uri = 'bitcoin:bc1q...&amount=0.002';
+const qrUrl = 'https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=' + encodeURIComponent(uri);
+document.getElementById('qr').src = qrUrl;
+</code></pre>
+
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <strong>Cripto no Dia a Dia</strong> — Guia prático. Feito para desenvolvedores e comerciantes.
+      </div>
+      <div class="text-end">
+        <small>Quer que eu gere uma versão customizada para a sua loja (ex.: com BTCPay + front-end)? Chame — posso gerar o código.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
