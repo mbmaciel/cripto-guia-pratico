@@ -3,102 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Receber Pagamentos em Cripto</title>
+  <title>Receber Pagamentos em Cripto - Cripto no Dia a Dia</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Cripto no Dia a Dia</a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <a class="navbar-brand fw-bold" href="index.html">₿ Cripto no Dia a Dia</a>
+      <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Aprenda</a>
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Aprenda</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="comprar.html">Comprar</a></li>
-              <li><a class="dropdown-item active" href="receber.html">Receber</a></li>
-              <li><a class="dropdown-item" href="pagar.html">Pagar</a></li>
-              <li><a class="dropdown-item" href="armazenar.html">Armazenar</a></li>
-              <li><a class="dropdown-item" href="lightning.html">Lightning</a></li>
+              <li><a class="dropdown-item" href="comprar.html"><i class="fa-solid fa-coins fa-fw me-2 text-accent"></i>Comprar</a></li>
+              <li><a class="dropdown-item active" href="receber.html"><i class="fa-solid fa-store fa-fw me-2 text-accent"></i>Receber</a></li>
+              <li><a class="dropdown-item" href="pagar.html"><i class="fa-solid fa-wallet fa-fw me-2 text-accent"></i>Pagar</a></li>
+              <li><a class="dropdown-item" href="armazenar.html"><i class="fa-solid fa-shield-halved fa-fw me-2 text-accent"></i>Armazenar</a></li>
+              <li><a class="dropdown-item" href="lightning.html"><i class="fa-solid fa-bolt fa-fw me-2 text-accent"></i>Lightning</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
           <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://t.me/cripto_dia_a_dia" target="_blank"><i class="fab fa-telegram"></i> Grupo</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn-telegram" href="https://t.me/cripto_dia_a_dia" target="_blank">
+              <i class="fab fa-telegram"></i> Grupo
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Header -->
-  <header class="bg-primary text-white text-center py-5">
+  <div class="page-header">
     <div class="container">
       <h1><i class="fa-solid fa-store"></i> Receber em Cripto</h1>
-      <p class="lead">Transforme seu celular ou computador em uma maquininha de pagamentos.</p>
+      <p class="page-header-lead">Transforme seu celular ou computador em uma maquininha de pagamentos.</p>
     </div>
-  </header>
+  </div>
 
   <!-- Conteúdo -->
-  <main class="container my-5">
-    <h2>Por que aceitar criptomoedas?</h2>
-    <p>Receber pagamentos em Bitcoin, USDT, USDC ou outras criptos pode trazer vantagens: 
-      <strong>redução de taxas</strong>, <strong>pagamentos instantâneos</strong> e 
-      <strong>acesso a clientes globais</strong>. Além disso, você não depende de bancos e pode receber direto em sua carteira.</p>
+  <main class="section-dark py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
 
-    <hr>
+          <h2 class="mb-3" style="font-size:1.6rem;">Por que aceitar criptomoedas?</h2>
+          <p>Receber pagamentos em Bitcoin, USDT, USDC ou outras criptos pode trazer vantagens:
+            <strong style="color:#f0f0f0;">redução de taxas</strong>, <strong style="color:#f0f0f0;">pagamentos instantâneos</strong> e
+            <strong style="color:#f0f0f0;">acesso a clientes globais</strong>. Além disso, você não depende de bancos e pode receber direto em sua carteira.</p>
 
-    <h2>Opções para receber pagamentos</h2>
-    <ul>
-      <li><strong>Carteiras móveis (apps):</strong> Apps como <em>BlueWallet</em>, <em>Trust Wallet</em> ou <em>Exodus</em> permitem receber direto no celular.</li>
-      <li><strong>Carteiras Lightning:</strong> Ideais para receber pequenas quantias com rapidez e taxas mínimas. Exemplo: <em>Wallet of Satoshi</em>.</li>
-      <li><strong>Soluções comerciais:</strong> Plataformas como <em>BTCPay Server</em> ou <em>CoinPayments</em> permitem integração com sistemas de vendas e emissão de faturas.</li>
-      <li><strong>Integradores brasileiros:</strong> Algumas fintechs oferecem conversão automática de cripto para real (Pix) ao receber.</li>
-    </ul>
+          <hr style="border-color: var(--border); margin: 2rem 0;">
 
-    <hr>
+          <h2 class="mb-3" style="font-size:1.6rem;">Opções para receber pagamentos</h2>
+          <ul style="color:#c0c0c0;">
+            <li class="mb-2"><strong style="color:#f0f0f0;">Carteiras móveis (apps):</strong> Apps como <em>BlueWallet</em>, <em>Trust Wallet</em> ou <em>Exodus</em> permitem receber direto no celular.</li>
+            <li class="mb-2"><strong style="color:#f0f0f0;">Carteiras Lightning:</strong> Ideais para receber pequenas quantias com rapidez e taxas mínimas. Exemplo: <em>Wallet of Satoshi</em>.</li>
+            <li class="mb-2"><strong style="color:#f0f0f0;">Soluções comerciais:</strong> Plataformas como <em>BTCPay Server</em> ou <em>CoinPayments</em> permitem integração com sistemas de vendas.</li>
+            <li class="mb-2"><strong style="color:#f0f0f0;">Integradores brasileiros:</strong> Algumas fintechs oferecem conversão automática de cripto para real (Pix) ao receber.</li>
+          </ul>
 
-    <h2>Como funciona na prática</h2>
-    <ol>
-      <li>Abra seu app de carteira.</li>
-      <li>Selecione a opção <strong>Receber</strong>.</li>
-      <li>Informe o valor da venda (opcional, em real ou em cripto).</li>
-      <li>Mostre o <strong>QR Code</strong> ao cliente.</li>
-      <li>O cliente paga escaneando o código.</li>
-      <li>Em segundos, a transação aparece na sua carteira.</li>
-    </ol>
+          <hr style="border-color: var(--border); margin: 2rem 0;">
 
-    <div class="alert alert-info">
-      💡 Dica: use sempre um celular exclusivo para a parte financeira do negócio, separado do uso pessoal.
+          <h2 class="mb-3" style="font-size:1.6rem;">Como funciona na prática</h2>
+          <div class="mt-3">
+            <div class="step-item"><div class="step-num">1</div><div class="step-body"><h5>Abra seu app de carteira</h5><p>Use BlueWallet, Wallet of Satoshi ou qualquer carteira de sua preferência.</p></div></div>
+            <div class="step-item"><div class="step-num">2</div><div class="step-body"><h5>Selecione "Receber"</h5><p>Toque no botão de recebimento dentro do aplicativo.</p></div></div>
+            <div class="step-item"><div class="step-num">3</div><div class="step-body"><h5>Informe o valor (opcional)</h5><p>Insira o valor da venda em real ou em cripto para gerar um QR Code personalizado.</p></div></div>
+            <div class="step-item"><div class="step-num">4</div><div class="step-body"><h5>Mostre o QR Code ao cliente</h5><p>O cliente escaneia com o celular dele e confirma o pagamento.</p></div></div>
+            <div class="step-item"><div class="step-num">5</div><div class="step-body"><h5>Pronto!</h5><p>Em segundos, a transação aparece confirmada na sua carteira.</p></div></div>
+          </div>
+
+          <div class="alert-info-dark my-4">
+            <i class="fa-solid fa-lightbulb me-2"></i>
+            <strong>Dica:</strong> use sempre um celular exclusivo para a parte financeira do negócio, separado do uso pessoal.
+          </div>
+
+          <hr style="border-color: var(--border); margin: 2rem 0;">
+
+          <h2 class="mb-3" style="font-size:1.6rem;">Taxas e conversão</h2>
+          <p>Receber em cripto pode ter custos muito menores que cartões tradicionais. Na <strong style="color:#f0f0f0;">Lightning Network</strong>, as taxas são praticamente zero. Em redes como Ethereum, pode haver custos maiores dependendo do congestionamento.</p>
+          <p>Você pode escolher manter o valor em cripto como investimento ou convertê-lo para real via corretoras ou integradores.</p>
+
+          <hr style="border-color: var(--border); margin: 2rem 0;">
+
+          <h2 class="mb-3" style="font-size:1.6rem;">Boas práticas de segurança</h2>
+          <ul style="color:#c0c0c0;">
+            <li class="mb-2"><i class="fa-solid fa-check text-accent me-2"></i>Use sempre uma <strong style="color:#f0f0f0;">carteira confiável</strong> (apps oficiais, sites verificados).</li>
+            <li class="mb-2"><i class="fa-solid fa-check text-accent me-2"></i>Habilite <strong style="color:#f0f0f0;">autenticação de dois fatores</strong> quando disponível.</li>
+            <li class="mb-2"><i class="fa-solid fa-check text-accent me-2"></i>Faça <strong style="color:#f0f0f0;">backup das chaves privadas</strong> ou seed phrase em local seguro.</li>
+            <li class="mb-2"><i class="fa-solid fa-check text-accent me-2"></i>Para valores maiores, prefira carteiras físicas (hardware wallets).</li>
+          </ul>
+
+        </div>
+      </div>
     </div>
-
-    <hr>
-
-    <h2>Taxas e conversão</h2>
-    <p>Receber em cripto pode ter custos muito menores que cartões tradicionais.  
-    - Na <strong>Lightning Network</strong>, as taxas são praticamente zero.  
-    - Em redes como Ethereum, pode haver custos maiores dependendo do congestionamento.</p>
-    <p>Você pode escolher manter o valor em cripto como investimento ou convertê-lo para real via corretoras ou integradores.</p>
-
-    <hr>
-
-    <h2>Boas práticas de segurança</h2>
-    <ul>
-      <li>Use sempre uma <strong>carteira confiável</strong> (apps oficiais, sites verificados).</li>
-      <li>Habilite <strong>autenticação de dois fatores</strong> quando disponível.</li>
-      <li>Faça <strong>backup das chaves privadas</strong> ou seed phrase em local seguro.</li>
-      <li>Para valores maiores, prefira carteiras físicas (hardware wallets).</li>
-    </ul>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2025 Cripto no Dia a Dia — Guia prático para comércio e serviços</p>
+  <footer class="footer-dark">
+    <div class="container">
+      <p>© 2025 Cripto no Dia a Dia — Guia prático para comércio e serviços</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
